@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Employee|Pay-Details</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+        </style>
+</head>
+<body>
+    <div class='container'>
+        <div class="jumbotron">
+            <h2> Welcome :{{name}}</h2>   
+          </div>
+
+          <table style="width:100%">
+            <tr>
+              <th><h4>Name:</h4></th>
+              <td><h4>{{name}}</h4></td>
+            </tr>
+            <tr>
+              <th><h4>Telephone:</h4></th>
+              <td><h4>{{mno}}</h4></td>
+            </tr>
+            <tr>
+                <th><h4>Email:</h4></th>
+                <td><h4>{{email}}</h4></td>
+              </tr>
+          </table>
+          <br>
+
+         <form action="salarymonth" method="POST" >
+          <div class="form-group row">
+            <label for="example-date-input" class="col-2 col-form-label">Month</label>
+            <div class="col-10">
+              <input class="form-control" type="month"  id="example-date-input" name="dob">
+              <input type="submit" class="btn btn-primary btn-lg btn-block" value="getSalary">
+            </div>
+         </form>
+         <table style="width:100%">
+          <tr>
+            <th><h4>No Of Working Days:</h4></th>
+            <td><h4>{{no}}</h4></td>
+          </tr>
+          <tr>
+            <th><h4>Absent:</h4></th>
+            <td><h4>{{ab}}</h4></td>
+          </tr>
+          <tr>
+              <th><h4>Present:</h4></th>
+              <td><h4>{{pres}}</h4></td>
+            </tr>
+        </table>
+        <br>
+
+
+
+
+         <h3> {{month}} Salary Details</h3>
+          <table style="width:100%">
+            <tr>
+              <td>Total-Salary</td>
+              <td>{{basic}}</td>
+            </tr>
+        </table>
+        <h3>Deduction's</h3>
+        <table style="width:100%">
+            <tr>
+                <td>Provident Fund</td>
+                <td>{{pf}}</td>
+              </tr>
+              <tr>
+                <td>Income-tax</td>
+                <td>{{it}}</td>
+              </tr>
+              <tr>
+                <td>Medical-Insurance</td>
+                <td>{{mi}}</td>
+              </tr>
+    </table>
+    <h3>After Deduction's</h3>
+    <table style="width:100%">
+        <tr>
+          <td>Net-Pay</td>
+          <td>{{pay}}</td>
+        </tr>
+    </table>
+
+    
+    
+          <a href="index.html" class="btn btn-primary btn-lg btn-block"> Logout</a>
+          <a href="/downlord-files/" class="btn btn-primary btn-lg btn-block">Download!</a>
+
+      

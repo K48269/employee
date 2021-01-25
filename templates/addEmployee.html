@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Add-Employee</title>
+</head>
+<body>
+    <div class='container'>
+        <div class="jumbotron">
+            <h1>Employee-Details</h1>      
+          </div>
+          <form action="addemployee" method="POST">
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr" name="uname">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="password">
+          </div>
+
+          <div class="form-group">
+            <label for="mno">Mobile-Number:</label>
+            <input type="text" class="form-control" id="mno" name="mobileNumber">
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="mno" name="email">
+
+            <div class="form-group">
+                <legend>Gender</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="maleorfemale" > Female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="maleorfemale"> Male
+                    </label>
+                </div>
+            </div>   
+            <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Month</label>
+                <div class="col-10">
+                  <input class="form-control" type="month"  id="example-date-input" name="dob">
+                </div>
+          </div>
+          <div class="form-group">
+            <label for="total">NoOfWorkingDays:</label>
+            <input type="text" class="form-control" id="total" name="total">
+          </div>
+          <div class="form-group">
+            <label for="absent">Employee Absent:</label>
+            <input type="absent" class="form-control" id="absent" name="absent">
+          </div>
+
+          <input class="btn btn-primary btn-lg btn-block" type="submit" value="Add-Employee">
+          
+        </form>
+        
+    </div>
+    {{report}}
+</body>
+</html>
