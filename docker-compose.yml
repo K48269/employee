@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  web:
+    build: .
+    links:
+     - db
+    ports:
+      - "5001:5001"
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD:"Soft#2021"
+    volumes: 
+          - ./init:/docker-entrypoint-initdb.d
