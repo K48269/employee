@@ -6,7 +6,7 @@ class OtpConnection:
     def SendEmail(self,email,otp):
         server=smtplib.SMTP('smtp.gmail.com',587)
         server.starttls()
-        server.login('bittukiran123@gmail.com','tphggvuxeqaylhru')
+        server.login('bittukiran123@gmail.com','innunmikxozoptlb')
         server.sendmail('bittukiran123@gmail.com',email,otp)
         print('Mail Sent')
         return True
