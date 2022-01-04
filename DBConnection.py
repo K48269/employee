@@ -3,7 +3,7 @@ from cryptography.fernet import Fernet
 
 
 def connection():
-    dataBase = mysql.connector.connect( host = "localhost",user = "root",passwd ="Soft#2021",database = "hello" ) 
+    dataBase = mysql.connector.connect( host = "db",user = "root",passwd ="Soft#2021",database = "hello" ) 
     return dataBase
 
 
