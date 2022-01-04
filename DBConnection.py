@@ -39,7 +39,7 @@ class DB:
     def select_values(self,id):
         database=connection()
         cursorObject = database.cursor()
-        sql='select a.id,a.name,a.Mobile_number,a.Email_id,b.e_key,b.p_key from employee_info a inner join login_passwords b on a.id=b.id where a.id=%s'
+        sql='select a.id,a.name,a.Mobile_number,a.Email_id,b.e_key,b.p_key from Employee_info a inner join login_passwords b on a.id=b.id where a.id=%s'
         cursorObject.execute(sql,(id,))
         my_result=cursorObject.fetchall()
         return my_result
