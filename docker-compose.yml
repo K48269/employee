@@ -15,3 +15,5 @@ services:
       MYSQL_ROOT_PASSWORD: "Soft#2021"
     volumes: 
           - ./init:/docker-entrypoint-initdb.d
+          - /home/hr178/mysqldata:/var/lib/mysql
+
