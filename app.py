@@ -7,7 +7,7 @@ from OtpConnection import OtpConnection
 
 db=DB()
 ed=EncryptionAndDecryption()
-otP=OtpConnection()
+#otP=OtpConnection()
 
 
 app = Flask(__name__)
@@ -37,12 +37,12 @@ def login():
           key=check[0][4].encode("utf-8")
           e_password=check[0][5].encode("utf-8")
           fetch_password=ed.decrypt_password(e_password,key)
-          global otp
+          #global otp
           if (id_check==id and fetch_password==password):
-              otp=otP.generateOTP()
-              user_email=check[0][3]
-              otP.SendEmail(user_email,otp)
-              return render_template('otp.html',status='Sent successfull')  
+              #otp=otP.generateOTP()
+              #user_email=check[0][3]
+              #otP.SendEmail(user_email,otp)
+              return render_template('user_info.html',uid=check[0][0],name=check[0][1],email=check[0][3],mno=check[0][2])  
           else:
               return render_template('login.html',status="Invalid Password")    
 
